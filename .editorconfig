@@ -1,0 +1,10 @@
+root = true
+
+# All files
+[*]
+charset = utf-8-bom
+indent_style = space
+
+# Xml files
+[*.xml]
+indent_size = 2

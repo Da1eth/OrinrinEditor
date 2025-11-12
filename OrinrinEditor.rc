@@ -1,0 +1,1244 @@
+// Microsoft Visual C++ generated resource script.
+//
+#pragma code_page(65001)
+
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 일본어(일본) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ORINRINEDITOR       ICON                    "OrinrinEditor.ico"
+
+IDI_SMALL               ICON                    "OrinrinEditor.ico"
+
+IDI_TREE_DIR_CLOSE      ICON                    "resource\\directory.ico"
+
+IDI_TREE_DIR_OPEN       ICON                    "resource\\dir_open.ico"
+
+IDI_TREE_DIR_EXTRA      ICON                    "resource\\dir_extra.ico"
+
+IDI_TREE_FILE_AST       ICON                    "resource\\file_ast.ico"
+
+IDI_TREE_FILE_MLT       ICON                    "resource\\file_mlt.ico"
+
+IDI_TREE_FILE_ETC       ICON                    "resource\\file_etc.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_ORINRINEDITOR MENU
+BEGIN
+    POPUP "파일(&F)"
+    BEGIN
+        MENUITEM "새 파일(&N)",                    IDM_NEWFILE
+        MENUITEM "불러오기(&O)",                    IDM_OPEN
+        MENUITEM "열어본 파일 기록(&H)",               IDM_OPEN_HISTORY
+        MENUITEM SEPARATOR
+        MENUITEM "저장하기(&S)",                    IDM_OVERWRITESAVE
+        MENUITEM "다른 이름으로 저장하기(&M)",            IDM_RENAMESAVE
+        MENUITEM "이미지 파일 내보내기(&I)",             IDM_IMAGE_SAVE
+        MENUITEM SEPARATOR
+        MENUITEM "파일 닫기(&C)",                   IDM_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "환경설정(&G)",                    IDM_GENERAL_OPTION
+        MENUITEM "우클릭 메뉴 설정(&E)",               IDM_MENUEDIT_DLG_OPEN
+        MENUITEM "글씨 색상 설정(&L)",                IDM_COLOUR_EDIT_OPEN
+        MENUITEM "단축키 설정(&K)",                  IDM_ACCELKEY_EDIT_DLG_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "버전 정보(&A)",                   IDM_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "종료(&Q)",                      IDM_EXIT
+    END
+    POPUP "편집(&E)"
+    BEGIN
+        MENUITEM "실행 취소(&U)",                   IDM_UNDO
+        MENUITEM "다시 실행(&R)",                   IDM_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "잘라내기(&T)",                    IDM_CUT
+        MENUITEM "복사하기(&C)",                    IDM_COPY
+        MENUITEM "붙여넣기(&P)",                    IDM_PASTE
+        MENUITEM "지우기(&D)",                     IDM_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "유니코드를 코드 모양으로 복사(&J)",        IDM_SJISCOPY
+        MENUITEM "AA 전체를 코드 모양으로 복사(&S)",       IDM_SJISCOPY_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "전체 선택(&A)",                   IDM_ALLSEL
+        MENUITEM SEPARATOR
+        MENUITEM "직사각형 모양 선택(&B)",              IDM_SQSELECT
+        MENUITEM "직사각형 모양 붙여넣기(&Q)",            IDM_SQUARE_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "레이어 박스(&L)",                  IDM_LAYERBOX
+        MENUITEM "분할 선택 모드(&E)",                IDM_EXTRACTION_MODE
+        MENUITEM SEPARATOR
+        MENUITEM "커서를 기준으로 새 페이지 분할(&V)",       IDM_PAGEL_DIVIDE
+        MENUITEM SEPARATOR
+        MENUITEM "선택 범위로 페이지 이름 붙이기(&N)",       IDM_PAGENAME_SELASSIGN
+        MENUITEM SEPARATOR
+        MENUITEM "찾기(&F)",                      IDM_FIND_DLG_OPEN
+        MENUITEM "검색 설정 초기화(&H)",               IDM_FIND_HIGHLIGHT_OFF
+    END
+    POPUP "삽입(&I)"
+    BEGIN
+        POPUP "유니코드 공백(&S)"
+        BEGIN
+            MENUITEM " &1도트 공백 [ U8202 ]",          IDM_IN_01SPACE
+            MENUITEM " &2도트 공백 [ U8201 ]",          IDM_IN_02SPACE
+            MENUITEM " &3도트 공백 [ U8198 ]",          IDM_IN_03SPACE
+            MENUITEM " &4도트 공백 [ U8197 ]",          IDM_IN_04SPACE
+            MENUITEM " &5도트 공백 [ U8196 ]",          IDM_IN_05SPACE
+            MENUITEM " &8도트 공백  [ U8194 ]",         IDM_IN_08SPACE
+            MENUITEM "&1&0도트 공백 [ U8199 ]",         IDM_IN_10SPACE
+            MENUITEM "&1&6도트 공백 [ U8195 ]",         IDM_IN_16SPACE
+        END
+        POPUP "색상 코드(&C)"
+        BEGIN
+            MENUITEM "스포(투명)(&W)",                  IDM_INSTAG_WHITE
+            MENUITEM "스포 닫기 태그(&/)",                IDM_INSTAG_CLOSPO
+            MENUITEM "파란색(&U)",                     IDM_INSTAG_BLUE
+            MENUITEM "검은색(&B)",                     IDM_INSTAG_BLACK
+            MENUITEM "붉은색(&R)",                     IDM_INSTAG_RED
+            MENUITEM "초록색(&G)",                     IDM_INSTAG_GREEN
+            MENUITEM "컬러 닫기 태그(&/)",                IDM_INSTAG_CLOCLR
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "말풍선 박스(&I)",                  IDM_FRMINSBOX_OPEN
+        MENUITEM "枠　Alpha",                     IDM_INSFRAME_ALPHA
+        POPUP "말풍선...(&F)"
+        BEGIN
+            MENUITEM "말풍선 편집(&Z)",                  IDM_INSFRAME_EDIT
+            MENUITEM SEPARATOR
+            MENUITEM "枠　Bravo",                     IDM_INSFRAME_BRAVO
+            MENUITEM "枠　Charlie",                   IDM_INSFRAME_CHARLIE
+            MENUITEM "枠　Delta",                     IDM_INSFRAME_DELTA
+            MENUITEM "枠　Echo",                      IDM_INSFRAME_ECHO
+            MENUITEM "枠　Foxtrot",                   IDM_INSFRAME_FOXTROT
+            MENUITEM "枠　Golf",                      IDM_INSFRAME_GOLF
+            MENUITEM "枠　Hotel",                     IDM_INSFRAME_HOTEL
+            MENUITEM "枠　India",                     IDM_INSFRAME_INDIA
+            MENUITEM "枠　Juliette",                  IDM_INSFRAME_JULIETTE
+            MENUITEM "枠　Kilo",                      IDM_INSFRAME_KILO
+            MENUITEM "枠　Lima",                      IDM_INSFRAME_LIMA
+            MENUITEM "枠　Mike",                      IDM_INSFRAME_MIKE
+            MENUITEM "枠　November",                  IDM_INSFRAME_NOVEMBER
+            MENUITEM "枠　Oscar",                     IDM_INSFRAME_OSCAR
+            MENUITEM "枠　Poppa",                     IDM_INSFRAME_PAPA
+            MENUITEM "枠　Quebec",                    IDM_INSFRAME_QUEBEC
+            MENUITEM "枠　Romeo",                     IDM_INSFRAME_ROMEO
+            MENUITEM "枠　Sierra",                    IDM_INSFRAME_SIERRA
+            MENUITEM "枠　Tango",                     IDM_INSFRAME_TANGO
+        END
+        MENUITEM SEPARATOR
+        POPUP "유저 제작 템플릿(&U)"
+        BEGIN
+            MENUITEM "(비었음)",                       IDM_USERINS_NA
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "문서에 일련번호 넣기(&N)",             IDM_PAGENUM_DLG_OPEN
+    END
+    POPUP "변형(&P)"
+    BEGIN
+        MENUITEM "우측에 직선 추가(&R)",               IDM_RIGHT_GUIDE_SET
+        MENUITEM "좌측 공백을 오른쪽으로 밀기(&I)",         IDM_INS_TOPSPACE
+        MENUITEM "좌측 공백을 왼쪽으로 당기기(&U)",         IDM_DEL_TOPSPACE
+        MENUITEM SEPARATOR
+        MENUITEM "줄 끝에 남는 공백 제거(&G)",           IDM_DEL_LASTSPACE
+        MENUITEM "줄 끝 마지막 문자 제거(&E)",           IDM_DEL_LASTLETTER
+        MENUITEM "선택 범위 공백으로 채우기(&F)",          IDM_FILL_SPACE
+        MENUITEM "빈 공간을 공백으로 채우기(&B)",          IDM_FILL_ZENSP
+        MENUITEM SEPARATOR
+        MENUITEM "첫 반각 공백을 유니코드로 변환(&L)",       IDM_HEADHALF_EXCHANGE
+        MENUITEM SEPARATOR
+        MENUITEM "좌우 반전(&M)",                   IDM_MIRROR_INVERSE
+        MENUITEM "상하 반전(&N)",                   IDM_UPSET_INVERSE
+        MENUITEM SEPARATOR
+        MENUITEM "AA 전체를 오른쪽으로 밀기(&H)",         IDM_RIGHT_SLIDE
+        MENUITEM "공백을 1도트 늘리기(&D)",             IDM_INCREMENT_DOT
+        MENUITEM "공백을 1도트 줄이기(&O)",             IDM_DECREMENT_DOT
+        MENUITEM SEPARATOR
+        MENUITEM "AA 전체를 오른쪽으로 1도트 밀기(&J)",     IDM_INCR_DOT_LINES
+        MENUITEM "AA 전체를 왼쪽으로 1도트 당기기(&K)",     IDM_DECR_DOT_LINES
+        MENUITEM "커서를 기준으로 왼쪽으로 당기기(&Q)",       IDM_DOT_SPLIT_LEFT
+        MENUITEM "커서를 기준으로 오른쪽으로 밀기(&P)",       IDM_DOT_SPLIT_RIGHT
+        MENUITEM SEPARATOR
+        POPUP "도트 조정(&A)"
+        BEGIN
+            MENUITEM "조정 기준 위치 잠그기(&R)",            IDM_DOTDIFF_LOCK
+            MENUITEM "커서 우측 공백 전부 지우기(&D)",         IDM_DOTDIFF_ADJT
+        END
+    END
+    POPUP "표시(&N)"
+    BEGIN
+        MENUITEM "공백 문자 표시(&W)",                IDM_SPACE_VIEW_TOGGLE
+        MENUITEM "그리드 표시(&H)",                  IDM_GRID_VIEW_TOGGLE
+        MENUITEM "우측 가이드라인 표시(&M)",             IDM_RIGHT_RULER_TOGGLE
+        MENUITEM "하단 가이드라인 표시(&S)",             IDM_UNDER_RULER_TOGGLE
+        MENUITEM SEPARATOR
+        MENUITEM "페이지 목록(&L)",                  IDM_PAGELIST_VIEW
+        MENUITEM "AA 팔레트(&T)",                  IDM_LINE_TEMPLATE
+        MENUITEM "브러시 팔레트(&F)",                 IDM_BRUSH_PALETTE
+        MENUITEM "유니코드 문자표(&U)",                IDM_UNI_PALETTE
+        MENUITEM "트레이싱 모드(&R)",                 IDM_TRACE_MODE_ON
+    END
+END
+
+IDC_PGLVPOPUPMENU MENU
+BEGIN
+    POPUP "페이지 목록 설정"
+    BEGIN
+        MENUITEM "페이지 내용 팝업 표시(&T)",            IDM_PAGEL_AATIP_TOGGLE
+        MENUITEM "선택 후 편집창 포커스",                IDM_PAGEL_RETURN_FOCUS
+        MENUITEM SEPARATOR
+        MENUITEM "새 페이지 추가(&N)",                IDM_PAGEL_ADD
+        MENUITEM "새 페이지 삽입(&I)",                IDM_PAGEL_INSERT
+        MENUITEM "선택한 페이지를 복제(&C)",             IDM_PAGEL_DUPLICATE
+        MENUITEM SEPARATOR
+        MENUITEM "선택한 페이지를 삭제(&D)",             IDM_PAGEL_DELETE
+        MENUITEM "다음 페이지와 결합(&U)",              IDM_PAGEL_COMBINE
+        MENUITEM "페이지를 위로 이동(&W)",              IDM_PAGEL_UPFLOW
+        MENUITEM "페이지를 아래로 이동(&S)",             IDM_PAGEL_DOWNSINK
+        MENUITEM SEPARATOR
+        MENUITEM "페이지 이름 변경(&R)",               IDM_PAGEL_RENAME
+        MENUITEM SEPARATOR
+        MENUITEM "페이지 정보 갱신(&Y)",               IDM_PAGEL_DETAIL, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "항상 위에 표시(&Z)",                IDM_TOPMOST_TOGGLE
+    END
+END
+
+IDM_AALIST_POPUP MENU
+BEGIN
+    POPUP "여러 줄 템플릿 표시"
+    BEGIN
+        MENUITEM "드래프트 보드에 추가(&G)",             IDM_DRAUGHT_ADDING
+        MENUITEM SEPARATOR
+        MENUITEM "편집 창에 붙여넣기(일반)(&I)",          IDM_MAA_INSERT_EDIT
+        MENUITEM "편집 창에 붙여넣기(직사각형)(&R)",        IDM_MAA_INTERRUPT_EDIT
+        MENUITEM SEPARATOR
+        MENUITEM "복사(문자 모양)",                   IDM_MAA_CLIP_UNICODE
+        MENUITEM "복사(코드 모양)",                   IDM_MAA_CLIP_SHIFTJIS
+        MENUITEM SEPARATOR
+        MENUITEM "레이어 박스에 복사(&L)",              IDM_MAA_SET_LAYERBOX
+        MENUITEM SEPARATOR
+        MENUITEM "섬네일 목록 열기(&H)",               IDM_MAA_THUMBNAIL_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "AA 팝업 표시(&T)",                IDM_MAA_AATIP_TOGGLE
+        MENUITEM "AA 구분 스타일 전환",                IDM_MAA_SEP_STYLE_TOGGLE
+        MENUITEM "선택 후 편집창 포커스",                IDM_MAA_RETURN_FOCUS
+        MENUITEM "배경색 변경(&K)",                  IDM_MAAITEM_BKCOLOUR
+        MENUITEM SEPARATOR
+        MENUITEM "아이템 추가(&A)",                  IDM_MAA_ITEM_INSERT
+        MENUITEM "아이템 삭제(&D)",                  IDM_MAA_FAV_DELETE
+    END
+END
+
+IDM_AATREE_POPUP MENU
+BEGIN
+    POPUP "여러 줄 템플릿 트리"
+    BEGIN
+        MENUITEM "프로파일 작성／열기(&N)",              IDM_MAA_PROFILE_MAKE
+        MENUITEM "AA 목록 트리 재구축(&T)",            IDM_TREE_RECONSTRUCT
+        MENUITEM "열어본 프로파일 목록(&H)",             IDM_OPEN_HISTORY
+        MENUITEM SEPARATOR
+        MENUITEM "파일 이름 검색(&F)",                IDM_FINDMAA_DLG_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "（미구현 더미）",                    IDM_DUMMY, GRAYED
+        MENUITEM "메인 탭으로 열기(&M)",               IDM_AATREE_MAINOPEN
+        MENUITEM "서브 탭으로 열기(&S)",               IDM_AATREE_SUBADD
+        MENUITEM "편집 모드로 열기(&E)",               IDM_AATREE_GOEDIT
+        MENUITEM SEPARATOR
+        MENUITEM "아이템 삭제(&D)",                  IDM_MAA_ITEM_DELETE, GRAYED
+    END
+END
+
+IDM_AATABS_POPUP MENU
+BEGIN
+    POPUP "여러 줄 템플릿"
+    BEGIN
+        MENUITEM "탭 닫기(&Q)",                    IDM_AATABS_DELETE
+        MENUITEM "서브 탭 전부 닫기(&A)",              IDM_AATABS_ALLDELETE
+        MENUITEM SEPARATOR
+        MENUITEM "편집 모드로 열기(&E)",               IDM_AATREE_GOEDIT
+        MENUITEM SEPARATOR
+        MENUITEM "이름 변경(&N)",                   IDM_AATABS_RENAME
+        MENUITEM SEPARATOR
+        MENUITEM "서브 탭을 한 줄로 표시",               IDM_AATABS_SINGLETAB
+    END
+END
+
+IDM_LAYERBOX_POPUP MENU
+BEGIN
+    POPUP "레이어 박스"
+    BEGIN
+        MENUITEM "복사(&C)",                      IDM_LYB_COPY
+        MENUITEM SEPARATOR
+        MENUITEM "공백 투과 설정 리셋(&R)",             IDM_LYB_TRANCE_RELEASE
+        MENUITEM "모든 공백을 투과하기(&T)",             IDM_LYB_TRANCE_ALL
+    END
+END
+
+IDM_MULTIFILE_POPUP MENU
+BEGIN
+    POPUP "복수 파일 탭"
+    BEGIN
+        MENUITEM "저장하기(&S)",                    IDM_OVERWRITESAVE
+        MENUITEM "다른 이름으로 저장하기(&M)",            IDM_RENAMESAVE
+        MENUITEM SEPARATOR
+        MENUITEM "파일 닫기(&Q)",                   IDM_FILE_CLOSE
+    END
+END
+
+IDM_TEMPLATE_POPUP MENU
+BEGIN
+    POPUP "テンプレウインドウのアレ"
+    BEGIN
+        MENUITEM "항상 위에 표시(&Z)",                IDM_TOPMOST_TOGGLE
+        MENUITEM "다시 불러오기(&R)",                 IDM_TMPLT_RELOAD
+    END
+END
+
+IDM_DRAUGHT_POPUP MENU
+BEGIN
+    POPUP "드래프트 보드"
+    BEGIN
+        MENUITEM "편집 창에 붙여넣기(일반)(&I)",          IDM_DRAUGHT_INSERTEDIT
+        MENUITEM "편집 창에 붙여넣기(직사각형)(&R)",        IDM_DRAUGHT_INTERRUPTEDIT
+        MENUITEM "레이어 박스로 복사(&L)",              IDM_DRAUGHT_LAYERBOX
+        MENUITEM "복사(문자 모양)",                   IDM_DRAUGHT_UNICLIP
+        MENUITEM "복사(코드 모양)",                   IDM_DRAUGHT_SJISCLIP
+        MENUITEM SEPARATOR
+        MENUITEM "개별 아이템 삭제(&D)",               IDM_DRAUGHT_DELETE
+        MENUITEM "보드 전체 삭제(&K)",                IDM_DRAUGHT_ALLDELETE
+        MENUITEM SEPARATOR
+        POPUP "이미지 크기"
+        BEGIN
+            MENUITEM "미니미  80px",                   IDM_DB_THUMB_ULTRALIGHT
+            MENUITEM "표준 128px",                    IDM_DB_THUMB_REGULAR
+            MENUITEM "곱빼기 160px",                   IDM_DB_THUMB_DEMIBOLD
+            MENUITEM "금관 사이즈 192px",                IDM_DB_THUMB_ULTRABOLD
+        END
+        MENUITEM "보드 내용 내보내기(&E)",              IDM_DRAUGHT_EXPORT
+        MENUITEM "닫기(&Q)",                      IDM_DRAUGHT_CLOSE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_ORINRINEDITOR ACCELERATORS
+BEGIN
+    "A",            IDM_ALLSEL,             VIRTKEY, CONTROL, NOINVERT
+    "C",            IDM_COPY,               VIRTKEY, CONTROL, NOINVERT
+    "X",            IDM_CUT,                VIRTKEY, CONTROL, NOINVERT
+    VK_LEFT,        IDM_DECR_DOT_LINES,     VIRTKEY, SHIFT, ALT, NOINVERT
+    VK_LEFT,        IDM_DECREMENT_DOT,      VIRTKEY, ALT, NOINVERT
+    "G",            IDM_DEL_LASTLETTER,     VIRTKEY, SHIFT, CONTROL, NOINVERT
+    "G",            IDM_DEL_LASTSPACE,      VIRTKEY, CONTROL, NOINVERT
+    "U",            IDM_DEL_TOPSPACE,       VIRTKEY, CONTROL, NOINVERT
+    "E",            IDM_DOTDIFF_ADJT,       VIRTKEY, CONTROL, ALT, NOINVERT
+    "W",            IDM_DOTDIFF_LOCK,       VIRTKEY, CONTROL, ALT, NOINVERT
+    VK_SPACE,       IDM_DRAUGHT_OPEN,       VIRTKEY, CONTROL, NOINVERT
+    VK_F4,          IDM_FILE_CLOSE,         VIRTKEY, CONTROL, NOINVERT
+    VK_NEXT,        IDM_FILE_NEXT,          VIRTKEY, CONTROL, NOINVERT
+    VK_PRIOR,       IDM_FILE_PREV,          VIRTKEY, CONTROL, NOINVERT
+    "G",            IDM_FILL_SPACE,         VIRTKEY, CONTROL, ALT, NOINVERT
+    "F",            IDM_FIND_DLG_OPEN,      VIRTKEY, CONTROL, NOINVERT
+    VK_F3,          IDM_FIND_JUMP_NEXT,     VIRTKEY, NOINVERT
+    VK_F3,          IDM_FIND_JUMP_PREV,     VIRTKEY, SHIFT, NOINVERT
+    VK_F3,          IDM_FIND_TARGET_SET,    VIRTKEY, CONTROL, NOINVERT
+    "W",            IDM_FRMINSBOX_OPEN,     VIRTKEY, CONTROL, NOINVERT
+    VK_RIGHT,       IDM_INCR_DOT_LINES,     VIRTKEY, SHIFT, ALT, NOINVERT
+    VK_RIGHT,       IDM_INCREMENT_DOT,      VIRTKEY, ALT, NOINVERT
+    "I",            IDM_INS_TOPSPACE,       VIRTKEY, CONTROL, NOINVERT
+    VK_SPACE,       IDM_LAYERBOX,           VIRTKEY, ALT, NOINVERT
+    "N",            IDM_NEWFILE,            VIRTKEY, CONTROL, NOINVERT
+    VK_F5,          IDM_NOW_PAGE_REFRESH,   VIRTKEY, NOINVERT
+    "B",            IDM_ON_PREVIEW,         VIRTKEY, CONTROL, NOINVERT
+    "O",            IDM_OPEN,               VIRTKEY, CONTROL, NOINVERT
+    "S",            IDM_OVERWRITESAVE,      VIRTKEY, CONTROL, NOINVERT
+    VK_DOWN,        IDM_PAGE_NEXT,          VIRTKEY, ALT, NOINVERT
+    VK_UP,          IDM_PAGE_PREV,          VIRTKEY, ALT, NOINVERT
+    "I",            IDM_PAGEL_ADD,          VIRTKEY, SHIFT, ALT, NOINVERT
+    "G",            IDM_PAGEL_COMBINE,      VIRTKEY, ALT, NOINVERT
+    "D",            IDM_PAGEL_DELETE,       VIRTKEY, ALT, NOINVERT
+    "J",            IDM_PAGEL_DOWNSINK,     VIRTKEY, ALT, NOINVERT
+    "C",            IDM_PAGEL_DUPLICATE,    VIRTKEY, ALT, NOINVERT
+    "I",            IDM_PAGEL_INSERT,       VIRTKEY, ALT, NOINVERT
+    "N",            IDM_PAGEL_RENAME,       VIRTKEY, ALT, NOINVERT
+    "U",            IDM_PAGEL_UPFLOW,       VIRTKEY, ALT, NOINVERT
+    "V",            IDM_PASTE,              VIRTKEY, CONTROL, NOINVERT
+    "Z",            IDM_REDO,               VIRTKEY, SHIFT, CONTROL, NOINVERT
+    "S",            IDM_RENAMESAVE,         VIRTKEY, CONTROL, ALT, NOINVERT
+    "R",            IDM_RIGHT_GUIDE_SET,    VIRTKEY, CONTROL, ALT, NOINVERT
+    "C",            IDM_SJISCOPY_ALL,       VIRTKEY, SHIFT, CONTROL, NOINVERT
+    "W",            IDM_SPACE_VIEW_TOGGLE,  VIRTKEY, SHIFT, CONTROL, NOINVERT
+    "B",            IDM_SQSELECT,           VIRTKEY, CONTROL, ALT, NOINVERT
+    VK_LEFT,        IDM_TMPL_GRID_DECREASE, VIRTKEY, CONTROL, NOINVERT
+    VK_RIGHT,       IDM_TMPL_GRID_INCREASE, VIRTKEY, CONTROL, NOINVERT
+    VK_DOWN,        IDM_TMPLT_GROUP_NEXT,   VIRTKEY, CONTROL, NOINVERT
+    VK_UP,          IDM_TMPLT_GROUP_PREV,   VIRTKEY, CONTROL, NOINVERT
+    "H",            IDM_TRC_VIEWTOGGLE,     VIRTKEY, ALT, NOINVERT
+    "Z",            IDM_UNDO,               VIRTKEY, CONTROL, NOINVERT
+    VK_TAB,         IDM_WINDOW_CHANGE,      VIRTKEY, CONTROL, NOINVERT
+    VK_TAB,         IDM_WINDOW_CHG_RVRS,    VIRTKEY, SHIFT, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 215, 196
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "버전 정보 - Orinrin Editor"
+FONT 9, "MS UI Gothic", 0, 0, 0x0
+BEGIN
+    ICON            IDI_ORINRINEDITOR,IDC_MYICON,10,10,18,21
+    LTEXT           "Orinrin Editor, Version 0.341 Korean (2025. 04. 22)",IDC_STATIC,36,6,168,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2011 - 2015 Orinrin/SikigamiHNQ",IDC_STATIC,36,18,168,8
+    LTEXT           "Site ： お燐ちゃんは俺の嫁．ｃｏｍ",IDC_STATIC,36,30,168,8
+    DEFPUSHBUTTON   "OK",IDOK,84,180,48,12,WS_GROUP
+    EDITTEXT        IDE_ABOUT_DISP,6,42,204,132,ES_MULTILINE | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+END
+
+IDD_UNICODE_PALETTE_DLG_2 DIALOG 0, 0, 438, 218
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "유니코드 문자표"
+FONT 11, "MS UI Gothic"
+BEGIN
+    COMBOBOX        IDCB_UNI_GROUPSEL,96,6,336,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDLV_UNI_CATALOGUE,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_OWNERDATA | LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER,96,36,336,126
+    EDITTEXT        IDE_UNI_LETTER_NAME,96,168,336,12,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "문자",IDC_STATIC,6,24,54,132
+    CTEXT           "",IDS_UNI_LETTER_IMG,12,36,42,42,SS_CENTERIMAGE | WS_BORDER
+    EDITTEXT        IDE_UNI_HEX_CODE,12,84,42,12,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDE_UNI_DEC_CODE,12,102,42,12,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    PUSHBUTTON      "선택",IDB_UNI_DECIDE,12,120,42,12
+    PUSHBUTTON      "복사",IDB_UNI_COPY_CLIP,12,138,42,12
+    LTEXT           "0x0",IDC_STATIC,96,24,13,8
+    LTEXT           "0x1",IDC_STATIC,126,24,13,8
+    LTEXT           "0x2",IDC_STATIC,146,24,13,8
+    LTEXT           "0x3",IDC_STATIC,166,24,13,8
+    LTEXT           "0x4",IDC_STATIC,186,24,13,8
+    LTEXT           "0x5",IDC_STATIC,206,24,13,8
+    LTEXT           "0x6",IDC_STATIC,226,24,13,8
+    LTEXT           "0x7",IDC_STATIC,246,24,13,8
+    LTEXT           "0x8",IDC_STATIC,266,24,13,8
+    LTEXT           "0x9",IDC_STATIC,286,24,13,8
+    LTEXT           "0xA",IDC_STATIC,306,24,13,8
+    LTEXT           "0xB",IDC_STATIC,326,24,13,8
+    LTEXT           "0xC",IDC_STATIC,346,24,13,8
+    LTEXT           "0xD",IDC_STATIC,366,24,13,8
+    LTEXT           "0xE",IDC_STATIC,386,24,13,8
+    LTEXT           "0xF",IDC_STATIC,406,24,13,8
+    LTEXT           "0x0000",IDS_UA_ALPHA,63,38,30,8
+    LTEXT           "0x0010",IDS_UA_BRAVO,63,54,30,8
+    LTEXT           "0x0020",IDS_UA_CHARLIE,63,69,30,8
+    LTEXT           "0x0030",IDS_UA_DELTA,63,85,30,8
+    LTEXT           "0x0040",IDS_UA_ECHO,63,101,30,8
+    LTEXT           "0x0050",IDS_UA_FOXTROT,63,117,30,8
+    LTEXT           "0x0060",IDS_UA_GOLF,63,133,30,8
+    LTEXT           "0x0070",IDS_UA_HOTEL,63,148,30,8
+    CONTROL         "",IDS_UNI_USE_LOG,"Static",SS_OWNERDRAW | SS_NOTIFY | WS_BORDER | WS_GROUP,96,186,336,24
+    LTEXT           "사용한 유니코드 문자 목록",IDC_STATIC,6,186,84,8
+    LTEXT           "※더블 클릭으로 붙여넣기",IDC_STATIC,6,198,84,8
+END
+
+IDD_FRAME_EDIT_DLG_2 DIALOGEX 0, 0, 226, 294
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "말풍선 편집"
+FONT 10, "MS UI Gothic", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDB_OK,84,150,42,12
+    PUSHBUTTON      "취소",IDB_CANCEL,132,150,42,12
+    PUSHBUTTON      "적용",IDB_APPLY,180,150,42,12
+    COMBOBOX        IDCB_BOX_NAME_SEL,6,6,87,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDE_BOXP_NAME_EDIT,98,6,80,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "이름 바꾸기",IDB_BOXP_NAME_APPLY,183,6,39,12
+    EDITTEXT        IDE_BOXP_MORNING,6,24,60,36,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN
+    EDITTEXT        IDE_BOXP_NOON,84,24,60,36,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN
+    EDITTEXT        IDE_BOXP_AFTERNOON,162,24,60,36,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN
+    EDITTEXT        IDE_BOXP_DAYBREAK,6,66,60,36,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN
+    EDITTEXT        IDE_BOXP_NIGHTFALL,162,66,60,36,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN
+    EDITTEXT        IDE_BOXP_DAWN,6,108,60,36,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN
+    EDITTEXT        IDE_BOXP_MIDNIGHT,84,108,60,36,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN
+    EDITTEXT        IDE_BOXP_TWILIGHT,162,108,60,36,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN
+    LTEXT           "좌측 여백",IDC_STATIC,72,66,36,8
+    EDITTEXT        IDE_LEFT_OFFSET,72,78,24,12,ES_AUTOHSCROLL
+    CONTROL         "",IDSP_LEFT_OFFSET,"msctls_updown32",UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_HORZ | UDS_HOTTRACK,96,78,12,12
+    RTEXT           "우측 여백",IDC_STATIC,120,66,36,8
+    EDITTEXT        IDE_RIGHT_OFFSET,120,78,24,12,ES_AUTOHSCROLL
+    CONTROL         "",IDSP_RIGHT_OFFSET,"msctls_updown32",UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_HORZ | UDS_HOTTRACK,144,78,12,12
+    CONTROL         "박스 크기에 말풍선 맞추기",IDB_FRM_PADDING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,72,96,84,8
+    CONTROL         "",IDS_FRAME_IMAGE,"Static",SS_OWNERDRAW | SS_NOPREFIX | SS_NOTIFY | WS_BORDER | WS_GROUP,6,168,216,120
+END
+
+IDD_PAGE_NAME_DLG DIALOGEX 0, 0, 167, 54
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "이름 입력"
+FONT 10, "MS UI Gothic", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,72,36,42,12
+    PUSHBUTTON      "취소",IDCANCEL,120,36,42,12
+    LTEXT           "이름을 입력해주세요",IDC_STATIC,6,6,156,8
+    EDITTEXT        IDE_PAGENAME,6,18,156,12,ES_AUTOHSCROLL
+END
+
+IDD_GENERAL_OPTION_DLG DIALOGEX 0, 0, 343, 202
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "환경설정"
+FONT 9, "MS UI Gothic", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,207,181,42,14
+    PUSHBUTTON      "취소",IDCANCEL,251,181,42,14
+    PUSHBUTTON      "적용",IDB_APPLY,295,181,42,14
+    GROUPBOX        "일반 설정",IDC_STATIC,6,6,192,94
+    CONTROL         "도트 조정할 때 유니코드 공백 사용하기",IDCB_USE_UNISPACE_SET,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,18,150,12
+    CONTROL         "유니코드 문자 저장 시 16진수 표기 사용하기",IDCB_UNIRADIX_HEX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,34,150,12
+    CONTROL         "파일 저장 시 알림 표시하기",IDCB_SAVE_MSG_ON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,50,150,12
+    CONTROL         "프로그램을 동시에 여러 개 실행할 수 있게 하기 (비추천)",IDCB_MULTIACT_ENA,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,66,150,12
+    CONTROL         "팔레트 창을 메인 화면에 통합하기 (재시작 필요)",IDCB_DOCKING_STYLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,82,150,12
+    GROUPBOX        "그리드 크기 설정",IDC_STATIC,204,6,78,30
+    CTEXT           "X",IDC_STATIC,210,18,8,12,SS_CENTERIMAGE
+    EDITTEXT        IDE_GRID_X_POS,218,18,22,12,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    CTEXT           "Y",IDC_STATIC,244,18,8,12,SS_CENTERIMAGE
+    EDITTEXT        IDE_GRID_Y_POS,252,18,22,12,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "1레스 크기",IDC_STATIC,288,6,48,30
+    EDITTEXT        IDE_PAGE_BYTE_MAX,297,18,30,12,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "가이드 위치 설정",IDC_STATIC,204,38,132,62
+    LTEXT           "우측 가이드",IDC_STATIC,213,52,42,8
+    EDITTEXT        IDE_RIGHT_RULER_POS,258,48,30,12,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "하단 가이드",IDC_STATIC,213,65,45,8
+    EDITTEXT        IDE_UNDER_RULER_POS,259,63,30,12,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "※우측 가이드는 도트 수, 하단 가이드는 줄 수\n　 한 줄은 18도트",IDC_STATIC,212,80,118,16
+    GROUPBOX        "자동 저장 간격 (분 단위) ※0=저장 안 함",IDC_STATIC,6,102,118,34
+    EDITTEXT        IDE_AUTO_BU_INTVL,11,115,30,12,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "백업 완료 메세지 표시",IDCB_AUTOBU_MSG_ON,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,49,113,66,18
+    GROUPBOX        "시작할 때 전에 작업하던 파일을",IDC_STATIC,130,102,132,34
+    CONTROL         "열기",IDRB_LASTOPEN_DO,"Button",BS_AUTORADIOBUTTON | WS_GROUP,139,118,24,8
+    CONTROL         "열지 않기",IDRB_LASTOPEN_NON,"Button",BS_AUTORADIOBUTTON,172,118,37,8
+    CONTROL         "물어보기",IDRB_LASTOPEN_ASK,"Button",BS_AUTORADIOBUTTON,217,118,34,8
+    GROUPBOX        "오른쪽으로 밀기 강도",IDC_STATIC,269,102,67,34
+    EDITTEXT        IDE_RIGHTSLIDE_DOT,284,116,36,12,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "레이어 박스 투명도",IDC_STATIC,6,138,256,36
+    CONTROL         "",IDSL_LAYERBOX_TRANCED,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,34,148,198,15
+    CTEXT           "투명",IDC_STATIC,12,148,18,18,SS_CENTERIMAGE
+    CTEXT           "불투명",IDC_STATIC,238,148,18,18,SS_CENTERIMAGE
+    PUSHBUTTON      "폰트 변경\r\n(재시작 필요)",IDB_CHOOSEFONT,268,141,69,33,BS_MULTILINE
+END
+
+IDD_TRACEADJUST_DLG2 DIALOGEX 0, 0, 139, 281
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "트레이싱 모드"
+FONT 10, "MS UI Gothic", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "짤",IDB_TRC_IMAGEOPEN,6,13,19,19
+    GROUPBOX        "Ｘ좌표",IDC_STATIC,30,6,102,30
+    SCROLLBAR       IDSL_TRC_HRIZ_POS,36,18,66,11
+    EDITTEXT        IDE_TRC_HRIZ_VALUE,102,18,24,12,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "Ｙ좌표",IDC_STATIC,6,42,30,114
+    SCROLLBAR       IDSL_TRC_VART_POS,12,54,11,78,SBS_VERT
+    EDITTEXT        IDE_TRC_VART_VALUE,6,138,30,12,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "글자색",IDC_STATIC,6,162,30,36
+    CONTROL         "",IDPL_TRC_MOZICOLOUR,"Static",SS_BLACKFRAME | SS_NOTIFY | SS_SUNKEN,12,174,18,18
+    CONTROL         "상하반전",IDCB_TRC_IMG_UPSET,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,6,204,30,18
+    CONTROL         "좌우반전",IDCB_TRC_IMG_MIRROR,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,6,222,30,18
+    GROUPBOX        "대비",IDC_STATIC,42,42,90,42
+    SCROLLBAR       IDSL_TRC_CONTRAST,48,54,78,11
+    LTEXT           "-255",IDC_STATIC,48,66,18,12,SS_CENTERIMAGE
+    LTEXT           "255",IDC_STATIC,114,66,12,12,SS_CENTERIMAGE
+    EDITTEXT        IDE_TRC_CONTRAST_VALUE,72,66,30,12,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "감마",IDC_STATIC,42,90,90,42
+    SCROLLBAR       IDSL_TRC_GAMMA,48,103,78,11
+    LTEXT           "0",IDC_STATIC,48,114,8,12,SS_CENTERIMAGE
+    LTEXT           "3.0",IDC_STATIC,114,114,12,12,SS_CENTERIMAGE
+    EDITTEXT        IDE_TRC_GAMMA_VALUE,72,114,30,12,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "채도",IDC_STATIC,42,138,90,42
+    SCROLLBAR       IDSL_TRC_GRAYMOPH,48,151,78,11
+    LTEXT           "0",IDC_STATIC,48,162,8,12,SS_CENTERIMAGE
+    LTEXT           "255",IDC_STATIC,114,162,12,12,SS_CENTERIMAGE
+    EDITTEXT        IDE_TRC_GRAYMOPH_VALUE,72,162,30,12,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "확대/축소",IDC_STATIC,42,186,90,42
+    SCROLLBAR       IDSL_TRC_ZOOM,48,199,78,11
+    LTEXT           "(-)",IDC_STATIC,48,210,10,12,SS_CENTERIMAGE
+    LTEXT           "(+)",IDC_STATIC,120,210,10,12,SS_CENTERIMAGE
+    EDITTEXT        IDE_TRC_ZOOM_VALUE,72,210,30,12,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "회전",IDC_STATIC,42,234,90,42
+    SCROLLBAR       IDSL_TRC_TURN,48,246,78,11
+    LTEXT           "0",IDC_STATIC,48,258,8,12,SS_CENTERIMAGE
+    LTEXT           "359",IDC_STATIC,114,258,12,12,SS_CENTERIMAGE
+    EDITTEXT        IDE_TRC_TURN_VALUE,72,258,30,12,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "숨기기",IDB_TRC_VIEWTOGGLE,6,246,30,12
+    PUSHBUTTON      "설정 리셋",IDB_TRC_RESET,6,263,30,12
+END
+
+IDD_IMAGE_OPEN_DLG DIALOGEX 0, 0, 321, 122
+STYLE DS_SETFONT | DS_3DLOOK | DS_CONTROL | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+FONT 10, "MS UI Gothic", 0, 0, 0x0
+BEGIN
+    LTEXT           "",IDC_STATIC_STC32,0,0,192,120
+    CONTROL         "섬네일 표시",IDCB_TRC_DLG_USETHUMB,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,198,6,78,10
+    CONTROL         "",IDS_TRC_DLG_THUMBFRAME,"Static",SS_BLACKFRAME | WS_BORDER,198,24,114,96
+END
+
+IDD_PROFILE_TREESEL_DLG DIALOGEX 0, 0, 203, 275
+STYLE DS_SETFONT | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "사용할 폴더 선택"
+FONT 10, "MS UI Gothic", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDE_PRTREE_DIR,6,6,120,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "참조",IDB_PRTREE_DIR_REF,126,6,24,12
+    DEFPUSHBUTTON   "리스트 추가",IDB_PRTREE_LISTUP,156,6,42,12
+    CONTROL         "",IDPB_PRTREE_PROGRESS,"msctls_progress32",PBS_SMOOTH,6,24,192,8
+    CONTROL         "",IDTV_PRTREE_DIR_TVIEW,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS | TVS_CHECKBOXES | WS_BORDER | WS_HSCROLL | WS_TABSTOP,6,32,192,220
+    PUSHBUTTON      "구축",IDOK,77,258,48,12
+END
+
+IDD_MSGCHECKBOX_DLG DIALOGEX 0, 0, 210, 71
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "조작 확인"
+FONT 10, "MS UI Gothic", 0, 0, 0x0
+BEGIN
+    ICON            32516,IDC_ICON_BOX,6,6,20,20
+    DEFPUSHBUTTON   "실행한다",IDYES,42,48,48,14
+    PUSHBUTTON      "그만둔다",IDNO,120,48,48,14
+    LTEXT           "スタティック",IDS_MC_MSG1,36,6,168,8
+    LTEXT           "スタティック",IDS_MC_MSG2,36,18,168,8
+    CONTROL         "다시 보지 않기",IDCB_MC_CHECKBOX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,36,30,168,8
+END
+
+IDD_PAGENUMBER_DLG DIALOGEX 0, 0, 143, 100
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "페이지 번호 넣기"
+FONT 10, "MS UI Gothic", 0, 0, 0x0
+BEGIN
+    RTEXT           "시작 숫자",IDC_STATIC,18,6,36,12,SS_CENTERIMAGE
+    EDITTEXT        IDE_PN_START,60,6,42,12,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    RTEXT           "서식",IDC_STATIC,18,24,36,12,SS_CENTERIMAGE
+    EDITTEXT        IDE_PN_STYLE,60,24,60,12,ES_AUTOHSCROLL
+    CONTROL         "페이지 위가 아닌 아래에 번호 넣기",IDCB_PN_UNDER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,42,132,8
+    CONTROL         "기존 내용을 지우고 번호 덮어쓰기",IDCB_PN_OVERRIDE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,54,132,8
+    LTEXT           "※페이지 번호 삽입은 되돌릴 수 없습니다",IDC_STATIC,6,66,130,12,SS_CENTERIMAGE
+    DEFPUSHBUTTON   "실행한다",IDOK,48,80,48,12
+END
+
+IDD_MAA_IADD_DLG DIALOGEX 0, 0, 320, 240
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "추가 아이템 확인 및 이름 설정"
+FONT 10, "MS UI Gothic", 0, 0, 0x0
+BEGIN
+END
+
+IDD_CONTEXT_ITEM_DLG DIALOGEX 0, 0, 275, 251
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "우클릭 메뉴 편집"
+FONT 10, "MS UI Gothic", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,138,234,48,12
+    PUSHBUTTON      "취소",IDCANCEL,198,234,48,12
+    CONTROL         "",IDLV_MENU_ALLITEM,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,6,18,102,210
+    PUSHBUTTON      "→",IDB_MENUITEM_ADD,114,96,24,12
+    PUSHBUTTON      "←",IDB_MENUITEM_DEL,114,126,24,12
+    CONTROL         "",IDLV_MENU_BUILDX,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,144,18,102,210
+    PUSHBUTTON      "↑",IDB_MENUITEM_SPINUP,252,96,18,18
+    PUSHBUTTON      "↓",IDB_MENUITEM_SPINDOWN,252,120,18,18
+    LTEXT           "전체 목록",IDC_STATIC,6,6,54,8
+    LTEXT           "현재 설정",IDC_STATIC,144,6,66,8
+END
+
+IDD_FIND_STRING_DLG DIALOGEX 0, 0, 179, 150
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "찾기"
+FONT 10, "MS UI Gothic", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "검색 시작",IDOK,90,126,54,18
+    PUSHBUTTON      "강조 해제",IDB_FIND_CLEAR,6,132,54,12
+    EDITTEXT        IDE_FIND_TEXT,12,18,156,12,ES_AUTOHSCROLL
+    GROUPBOX        "찾을 내용",IDC_STATIC,6,6,168,30
+    GROUPBOX        "검색 범위",IDC_STATIC,6,42,168,30
+    COMBOBOX        IDCB_FIND_TARGET,12,54,156,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "선택 사항",IDC_STATIC,6,78,168,42
+    CONTROL         "\\n = 줄바꿈、\\\\ = \\ 로 해서 검색",IDCB_MOD_CRLF_YEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,90,156,8
+END
+
+IDD_FIND_MAA_DLG DIALOGEX 0, 0, 215, 126
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "여러줄 템플릿 파일 검색"
+FONT 10, "MS UI Gothic", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,162,6,48,12
+    EDITTEXT        IDE_MAA_FIND_NAME,6,6,150,12,ES_AUTOHSCROLL
+    CONTROL         "",IDLV_MAA_FINDED_FILE,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,6,24,204,96
+END
+
+IDD_COLOUR_DLG DIALOGEX 0, 0, 162, 119
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "색상 설정"
+FONT 10, "MS UI Gothic", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "글자색",IDB_COLOUR_BASIC_PEN,6,6,72,12
+    PUSHBUTTON      "배경색",IDB_COLOUR_BASIC_BACK,84,6,72,12
+    PUSHBUTTON      "그리드",IDB_COLOUR_GRID_LINE,6,24,72,12
+    PUSHBUTTON      "엔터키",IDB_COLOUR_CRLF_MARK,84,24,72,12
+    PUSHBUTTON      "유니코드 문자",IDB_COLOUR_CANT_SJIS,6,42,72,12
+    CONTROL         "",IDS_COLOUR_IMAGE,"Static",SS_OWNERDRAW | SS_NOPREFIX | SS_NOTIFY | WS_BORDER,6,60,150,36,WS_EX_CLIENTEDGE
+    DEFPUSHBUTTON   "OK",IDOK,66,102,42,12
+    PUSHBUTTON      "취소",IDCANCEL,114,102,42,12
+END
+
+IDD_ACCEL_KEY_DLG DIALOGEX 0, 0, 294, 144
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "단축키 설정"
+FONT 10, "MS UI Gothic", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,186,126,48,12
+    PUSHBUTTON      "취소",IDCANCEL,240,126,48,12
+    CONTROL         "",IDLV_FUNCKEY_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_VSCROLL | WS_TABSTOP,0,0,180,144
+    LTEXT           "단축키",IDC_STATIC,186,24,102,8
+    CONTROL         "",IDHKC_FUNCKEY_INPUT,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,186,36,102,12
+    PUSHBUTTON      "설정하기",IDB_FUNCKEY_SET,186,54,54,12
+    PUSHBUTTON      "지우기",IDB_FUNCKEY_CLEAR,258,54,30,12
+    CONTROL         "Space 키를 함께 사용",IDCB_FUNCKEY_SPACE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,186,72,102,8
+    LTEXT           "※단축키에 스페이스바를 포함하고 싶을 때에는 위 버튼을 체크해야 합니다.",IDC_STATIC,186,84,102,36
+    PUSHBUTTON      "설정 내보내기",IDB_FUNCKEY_FILEOUT,186,6,54,12
+    PUSHBUTTON      "초기화",IDB_FUNCKEY_INIT,258,6,30,12
+END
+
+IDD_TODAY_HINT_DLG DIALOGEX 0, 0, 239, 119
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "오늘의 힌트"
+FONT 10, "MS UI Gothic", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "닫기",IDOK,186,102,48,12
+    LTEXT           "スタティック",IDS_CHAR_IMAGE,6,6,72,90
+    LTEXT           "テキスト",IDS_HINT_VIEWER,84,6,150,90,SS_SUNKEN
+    CONTROL         "다시 보지 않기",IDCB_NEVER_VIEWING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,102,96,12
+    PUSHBUTTON      "다른 힌트 보기",IDB_NEXT_HINT,132,102,48,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2024,4,22,0
+ PRODUCTVERSION 0,34,1,920
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041204b0"
+        BEGIN
+            VALUE "Comments", "Korean Transtale Ver, Perfectly No Warranty"
+            VALUE "CompanyName", "I love 2ch, Yaruo and TohoProject"
+            VALUE "FileDescription", "AsciiArt Story Editor by Orinrin!"
+            VALUE "FileVersion", "2024.4.22.0"
+            VALUE "InternalName", "Orinrin Editor"
+            VALUE "LegalCopyright", "Copyright (C) 2011 - 2015 Orinrin/SikigamiHNQ"
+            VALUE "LegalTrademarks", "License : GPLv3"
+            VALUE "OriginalFilename", "OrinrinEditor.exe"
+            VALUE "PrivateBuild", "Build by Visual C++ 2022 Community"
+            VALUE "ProductName", "Orinrin Editor"
+            VALUE "ProductVersion", "0.34.1.920"
+            VALUE "SpecialBuild", "Not Speciality"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x412, 1200
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDBMP_ALLSELECT         BITMAP                  "resource\\AllSelect.bmp"
+
+IDBMQ_ALLSELECT         BITMAP                  "resource\\AllSelect_q.bmp"
+
+IDBMP_BOXSELECT         BITMAP                  "resource\\BoxSelect.bmp"
+
+IDBMQ_BOXSELECT         BITMAP                  "resource\\BoxSelect_q.bmp"
+
+IDBMP_BRUSH_MODE        BITMAP                  "resource\\BrushMode.bmp"
+
+IDBMQ_BRUSH_MODE        BITMAP                  "resource\\BrushMode_q.bmp"
+
+IDBMP_COLOURTAG         BITMAP                  "resource\\ColourTag.bmp"
+
+IDBMQ_COLOURTAG         BITMAP                  "resource\\ColourTag_q.bmp"
+
+IDBMP_COPY              BITMAP                  "resource\\Copy.bmp"
+
+IDBMQ_COPY              BITMAP                  "resource\\Copy_q.bmp"
+
+IDBMP_CUT               BITMAP                  "resource\\Cut.bmp"
+
+IDBMQ_CUT               BITMAP                  "resource\\Cut_q.bmp"
+
+IDBMP_DELETE            BITMAP                  "resource\\Delete.bmp"
+
+IDBMQ_DELETE            BITMAP                  "resource\\Delete_q.bmp"
+
+IDBMP_DECREMENT_DOT     BITMAP                  "resource\\DecrementDot.bmp"
+
+IDBMQ_DECREMENT_DOT     BITMAP                  "resource\\DecrementDot_q.bmp"
+
+IDBMP_EXTRACT           BITMAP                  "resource\\Extract.bmp"
+
+IDBMQ_EXTRACT           BITMAP                  "resource\\Extract_q.bmp"
+
+IDBMP_EXTRACTLAYER      BITMAP                  "resource\\ExtractLayer.bmp"
+
+IDBMQ_EXTRACTLAYER      BITMAP                  "resource\\ExtractLayer_q.bmp"
+
+IDBMP_FILE_NEW          BITMAP                  "resource\\FileCreate.bmp"
+
+IDBMQ_FILE_NEW          BITMAP                  "resource\\FileCreate_q.bmp"
+
+IDBMP_FILE_OPEN         BITMAP                  "resource\\FileOpen.bmp"
+
+IDBMQ_FILE_OPEN         BITMAP                  "resource\\FileOpen_q.bmp"
+
+IDBMP_FILE_SAVE         BITMAP                  "resource\\FileSave.bmp"
+
+IDBMQ_FILE_SAVE         BITMAP                  "resource\\FileSave_q.bmp"
+
+IDBMP_FRAME_INSERT      BITMAP                  "resource\\Frame.bmp"
+
+IDBMQ_FRAME_INSERT      BITMAP                  "resource\\Frame_q.bmp"
+
+IDBMP_HEADSPACEADD      BITMAP                  "resource\\HeadSpaceAdd.bmp"
+
+IDBMQ_HEADSPACEADD      BITMAP                  "resource\\HeadSpaceAdd_q.bmp"
+
+IDBMP_HEADSPACEDEL      BITMAP                  "resource\\HeadSpaceDel.bmp"
+
+IDBMQ_HEADSPACEDEL      BITMAP                  "resource\\HeadSpaceDel_q.bmp"
+
+IDBMP_INCREMENT_DOT     BITMAP                  "resource\\IncrementDot.bmp"
+
+IDBMQ_INCREMENT_DOT     BITMAP                  "resource\\IncrementDot_q.bmp"
+
+IDBMP_LAAYEROVERWRITE   BITMAP                  "resource\\LaayerOverWrite.bmp"
+
+IDBMQ_LAAYEROVERWRITE   BITMAP                  "resource\\LaayerOverWrite_q.bmp"
+
+IDBMP_LAYERBOX          BITMAP                  "resource\\LayerBox.bmp"
+
+IDBMQ_LAYERBOX          BITMAP                  "resource\\LayerBox_q.bmp"
+
+IDBMP_LAYERINSERT       BITMAP                  "resource\\LayerInsert.bmp"
+
+IDBMQ_LAYERINSERT       BITMAP                  "resource\\LayerInsert_q.bmp"
+
+IDBMP_LAYERTEXTEDIT     BITMAP                  "resource\\LayerTextEdit.bmp"
+
+IDBMQ_LAYERTEXTEDIT     BITMAP                  "resource\\LayerTextEdit_q.bmp"
+
+IDBMP_LINESSHIFTLEFT    BITMAP                  "resource\\LinesShiftLeft.bmp"
+
+IDBMQ_LINESSHIFTLEFT    BITMAP                  "resource\\LinesShiftLeft_q.bmp"
+
+IDBMP_LINESSHIFTRIGHT   BITMAP                  "resource\\LinesShiftRight.bmp"
+
+IDBMQ_LINESSHIFTRIGHT   BITMAP                  "resource\\LinesShiftRight_q.bmp"
+
+IDBMP_PAGECOMBINE       BITMAP                  "resource\\PageCombine.bmp"
+
+IDBMQ_PAGECOMBINE       BITMAP                  "resource\\PageCombine_q.bmp"
+
+IDBMP_PAGECREATE        BITMAP                  "resource\\PageCreate.bmp"
+
+IDBMQ_PAGECREATE        BITMAP                  "resource\\PageCreate_q.bmp"
+
+IDBMP_PAGEDELETE        BITMAP                  "resource\\PageDelete.bmp"
+
+IDBMQ_PAGEDELETE        BITMAP                  "resource\\PageDelete_q.bmp"
+
+IDBMP_PAGEDIVIDE        BITMAP                  "resource\\PageDivide.bmp"
+
+IDBMQ_PAGEDIVIDE        BITMAP                  "resource\\PageDivide_q.bmp"
+
+IDBMP_PAGEDUPLICATE     BITMAP                  "resource\\PageDuplicate.bmp"
+
+IDBMQ_PAGEDUPLICATE     BITMAP                  "resource\\PageDuplicate_q.bmp"
+
+IDBMP_PAGEINSERT        BITMAP                  "resource\\PageInsert.bmp"
+
+IDBMQ_PAGEINSERT        BITMAP                  "resource\\PageInsert_q.bmp"
+
+IDBMP_PAGENAMECHANGE    BITMAP                  "resource\\PageNameChange.bmp"
+
+IDBMQ_PAGENAMECHANGE    BITMAP                  "resource\\PageNameChange_q.bmp"
+
+IDBMP_PAGESJISCOPY      BITMAP                  "resource\\PageSjisCopy.bmp"
+
+IDBMQ_PAGESJISCOPY      BITMAP                  "resource\\PageSjisCopy_q.bmp"
+
+IDBMP_PAGEUNDERSHIFT    BITMAP                  "resource\\PageUnderShift.bmp"
+
+IDBMQ_PAGEUNDERSHIFT    BITMAP                  "resource\\PageUnderShift_q.bmp"
+
+IDBMP_PAGEUPPERSHIFT    BITMAP                  "resource\\PageUpperShift.bmp"
+
+IDBMQ_PAGEUPPERSHIFT    BITMAP                  "resource\\PageUpperShift_q.bmp"
+
+IDBMP_PASTE             BITMAP                  "resource\\Paste.bmp"
+
+IDBMQ_PASTE             BITMAP                  "resource\\Paste_q.bmp"
+
+IDBMP_PREVIEW           BITMAP                  "resource\\Preview.bmp"
+
+IDBMQ_PREVIEW           BITMAP                  "resource\\Preview_q.bmp"
+
+IDBMP_DRAUGHTBOARD      BITMAP                  "resource\\DraughtBoard.bmp"
+
+IDBMQ_DRAUGHTBOARD      BITMAP                  "resource\\DraughtBoard_q.bmp"
+
+IDBMP_THUMBNAIL         BITMAP                  "resource\\thumbnail.bmp"
+
+IDBMQ_THUMBNAIL         BITMAP                  "resource\\thumbnail_q.bmp"
+
+IDBMP_PREVIEW_ALL       BITMAP                  "resource\\PreviewAll.bmp"
+
+IDBMQ_PREVIEW_ALL       BITMAP                  "resource\\PreviewAll_q.bmp"
+
+IDBMP_REDO              BITMAP                  "resource\\Redo.bmp"
+
+IDBMQ_REDO              BITMAP                  "resource\\Redo_q.bmp"
+
+IDBMP_REFRESH           BITMAP                  "resource\\Refresh.bmp"
+
+IDBMQ_REFRESH           BITMAP                  "resource\\Refresh_q.bmp"
+
+IDBMP_RIGHTGUIDE        BITMAP                  "resource\\RightGuide.bmp"
+
+IDBMQ_RIGHTGUIDE        BITMAP                  "resource\\RightGuide_q.bmp"
+
+IDBMP_RIGHTSLIDE        BITMAP                  "resource\\RightShift.bmp"
+
+IDBMQ_RIGHTSLIDE        BITMAP                  "resource\\RightShift_q.bmp"
+
+IDBMP_SPLIT_LEFT        BITMAP                  "resource\\DotSplitLeft.bmp"
+
+IDBMQ_SPLIT_LEFT        BITMAP                  "resource\\DotSplitLeft_q.bmp"
+
+IDBMP_SPLIT_RIGHT       BITMAP                  "resource\\DotSplitRight.bmp"
+
+IDBMQ_SPLIT_RIGHT       BITMAP                  "resource\\DotSplitRight_q.bmp"
+
+IDBMP_SETTING           BITMAP                  "resource\\Setting.bmp"
+
+IDBMQ_SETTING           BITMAP                  "resource\\Setting_q.bmp"
+
+IDBMP_SJISCOPY          BITMAP                  "resource\\SJIScopy.bmp"
+
+IDBMQ_SJISCOPY          BITMAP                  "resource\\SJIScopy_q.bmp"
+
+IDBMP_TAILLETTERDEL     BITMAP                  "resource\\TailLetterDel.bmp"
+
+IDBMQ_TAILLETTERDEL     BITMAP                  "resource\\TailLetterDel_q.bmp"
+
+IDBMP_TAILSPACEDEL      BITMAP                  "resource\\TailSpaceDel.bmp"
+
+IDBMQ_TAILSPACEDEL      BITMAP                  "resource\\TailSpaceDel_q.bmp"
+
+IDBMP_TRACEMODE         BITMAP                  "resource\\TraceMode.bmp"
+
+IDBMQ_TRACEMODE         BITMAP                  "resource\\TraceMode_q.bmp"
+
+IDBMP_UNDO              BITMAP                  "resource\\Undo.bmp"
+
+IDBMQ_UNDO              BITMAP                  "resource\\Undo_q.bmp"
+
+IDBMP_UNIPALETTE        BITMAP                  "resource\\UniPalette.bmp"
+
+IDBMQ_UNIPALETTE        BITMAP                  "resource\\UniPalette_q.bmp"
+
+IDBMP_UNISPACE          BITMAP                  "resource\\UniSpace.bmp"
+
+IDBMQ_UNISPACE          BITMAP                  "resource\\UniSpace_q.bmp"
+
+IDBMP_USERDEF           BITMAP                  "resource\\UserDef.bmp"
+
+IDBMQ_USERDEF           BITMAP                  "resource\\UserDef_q.bmp"
+
+IDBMP_FRMINS_ALPHA      BITMAP                  "resource\\Box1.bmp"
+
+IDBMP_FRMINS_BRAVO      BITMAP                  "resource\\Box2.bmp"
+
+IDBMP_FRMINS_CHARLIE    BITMAP                  "resource\\Box3.bmp"
+
+IDBMP_FRMINS_DELTA      BITMAP                  "resource\\Box4.bmp"
+
+IDBMP_FRMINS_ECHO       BITMAP                  "resource\\Box5.bmp"
+
+IDBMP_FRMINS_FOXTROT    BITMAP                  "resource\\Box6.bmp"
+
+IDBMP_FRMINS_GOLF       BITMAP                  "resource\\Box7.bmp"
+
+IDBMP_FRMINS_HOTEL      BITMAP                  "resource\\Box8.bmp"
+
+IDBMP_FRMINS_INDIA      BITMAP                  "resource\\Box9.bmp"
+
+IDBMP_FRMINS_JULIETTE   BITMAP                  "resource\\Box10.bmp"
+
+IDBMP_FRMINS_KILO       BITMAP                  "resource\\Box11.bmp"
+
+IDBMP_FRMINS_LIMA       BITMAP                  "resource\\Box12.bmp"
+
+IDBMP_FRMINS_MIKE       BITMAP                  "resource\\Box13.bmp"
+
+IDBMP_FRMINS_NOVEMBER   BITMAP                  "resource\\Box14.bmp"
+
+IDBMP_FRMINS_OSCAR      BITMAP                  "resource\\Box15.bmp"
+
+IDBMP_FRMINS_POPPA      BITMAP                  "resource\\Box16.bmp"
+
+IDBMP_FRMINS_QUEBEC     BITMAP                  "resource\\Box17.bmp"
+
+IDBMP_FRMINS_ROMEO      BITMAP                  "resource\\Box18.bmp"
+
+IDBMP_FRMINS_SIERRA     BITMAP                  "resource\\Box19.bmp"
+
+IDBMP_FRMINS_TANGO      BITMAP                  "resource\\Box20.bmp"
+
+IDBMQ_FRMINS_SEL        BITMAP                  "resource\\Box_q.bmp"
+
+IDBMP_FRMINS_INSERT     BITMAP                  "resource\\BoxInsert.bmp"
+
+IDBMQ_FRMINS_INSERT     BITMAP                  "resource\\BoxInsert_q.bmp"
+
+IDBMP_FRMINS_PADD       BITMAP                  "resource\\FramePadding.bmp"
+
+IDBMQ_FRMINS_PADD       BITMAP                  "resource\\FramePadding_q.bmp"
+
+IDBMP_MOZI_SCRIPT       BITMAP                  "resource\\MoziScript.bmp"
+
+IDBMQ_MOZI_SCRIPT       BITMAP                  "resource\\MoziScript_q.bmp"
+
+IDBMP_MOZI_WRITE        BITMAP                  "resource\\MoziWrite.bmp"
+
+IDBMP_MOZI_ADVANCE      BITMAP                  "resource\\MoziAdv.bmp"
+
+IDBMQ_MOZI_ADVANCE      BITMAP                  "resource\\MoziAdv_q.bmp"
+
+IDBMP_VERT_LEFT         BITMAP                  "resource\\VertLeft.bmp"
+
+IDBMQ_VERT_LEFT         BITMAP                  "resource\\VertLeft_q.bmp"
+
+IDBMP_VERT_TRANS        BITMAP                  "resource\\VertTrans.bmp"
+
+IDBMQ_VERT_TRANS        BITMAP                  "resource\\VertTrans_q.bmp"
+
+IDBMP_UNICODE_MODE      BITMAP                  "resource\\Unicode_Use.bmp"
+
+IDBMQ_UNICODE_MODE      BITMAP                  "resource\\Unicode_Use_q.bmp"
+
+IDBMP_MIRROR_INVERSE    BITMAP                  "resource\\arrow_leftright.bmp"
+
+IDBMQ_MIRROR_INVERSE    BITMAP                  "resource\\arrow_leftright_q.bmp"
+
+IDBMP_UPSET_INVERSE     BITMAP                  "resource\\arrow_updown.bmp"
+
+IDBMQ_UPSET_INVERSE     BITMAP                  "resource\\arrow_updown_q.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+    END
+
+    IDD_UNICODE_PALETTE_DLG_2, DIALOG
+    BEGIN
+    END
+
+    IDD_FRAME_EDIT_DLG_2, DIALOG
+    BEGIN
+    END
+
+    IDD_PAGE_NAME_DLG, DIALOG
+    BEGIN
+    END
+
+    IDD_GENERAL_OPTION_DLG, DIALOG
+    BEGIN
+    END
+
+    IDD_TRACEADJUST_DLG2, DIALOG
+    BEGIN
+    END
+
+    IDD_IMAGE_OPEN_DLG, DIALOG
+    BEGIN
+    END
+
+    IDD_PROFILE_TREESEL_DLG, DIALOG
+    BEGIN
+    END
+
+    IDD_MSGCHECKBOX_DLG, DIALOG
+    BEGIN
+    END
+
+    IDD_PAGENUMBER_DLG, DIALOG
+    BEGIN
+    END
+
+    IDD_MAA_IADD_DLG, DIALOG
+    BEGIN
+    END
+
+    IDD_CONTEXT_ITEM_DLG, DIALOG
+    BEGIN
+    END
+
+    IDD_FIND_STRING_DLG, DIALOG
+    BEGIN
+    END
+
+    IDD_FIND_MAA_DLG, DIALOG
+    BEGIN
+    END
+
+    IDD_COLOUR_DLG, DIALOG
+    BEGIN
+    END
+
+    IDD_ACCEL_KEY_DLG, DIALOG
+    BEGIN
+    END
+
+    IDD_TODAY_HINT_DLG, DIALOG
+    BEGIN
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_APP_TITLE           "OrinrinEditor"
+    IDC_ORINRINEDITOR       "ORINRINEDITOR"
+END
+
+#endif    // 일본어(일본) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
