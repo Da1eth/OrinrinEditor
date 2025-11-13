@@ -405,3 +405,6 @@ OrinrinViewer.*
 
 #Sqlite
 sqlite3.*
+
+# Build file
+Release_Core*

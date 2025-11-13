@@ -537,16 +537,38 @@ BOOLEAN Lyb_OnCreate( HWND hWnd, LPCREATESTRUCT lpCreateStruct )
 	//	ツールバーサブクラス化
 	gpfOrigLyrTBProc = SubclassWindow( hToolWnd, gpfLayerTBProc );
 
-	//	貼り付けたら閉じるチェックボックスを付ける
+	/*	貼り付けたら閉じるチェックボックスを付ける
 	CreateWindowEx( 0, WC_BUTTON, TEXT("작업 후 창 닫기"), WS_CHILD | WS_VISIBLE | BS_AUTOCHECKBOX, 150, 2, 138, 23, hToolWnd, (HMENU)IDCB_LAYER_QUICKCLOSE, lcInst, NULL );
 	CheckDlgButton( hToolWnd, IDCB_LAYER_QUICKCLOSE, gbQuickClose ? BST_CHECKED : BST_UNCHECKED );
+  
+
+    #ifdef EDGE_BLANK_STYLE
+	    hWorkWnd = CreateWindowEx( 0, WC_COMBOBOX, TEXT(""), WS_CHILD | WS_VISIBLE | CBS_DROPDOWNLIST, 290, 0, 140, 70, hToolWnd, (HMENU)IDCB_LAYER_EDGE_BLANK, lcInst, NULL );
+	    ComboBox_AddString( hWorkWnd, TEXT("여백 추가 없음") );
+	    ComboBox_AddString( hWorkWnd, TEXT("작은 여백 추가") );
+	    ComboBox_AddString( hWorkWnd, TEXT("큰 여백 추가") );
+	    ComboBox_SetCurSel( hWorkWnd, 0 );
+    #endif
+
+  */
+
+    // 일본어 환경에서 글씨 안 깨지게
+    HFONT hUIFont = CreateFontW( -12, 0, 0, 0, FW_NORMAL, FALSE, FALSE, FALSE, HANGEUL_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, DEFAULT_QUALITY, DEFAULT_PITCH | FF_SWISS, L"Malgun Gothic");
+
+    HWND hBtn = CreateWindowExW(
+        0, WC_BUTTON, L"작업 후 창 닫기", WS_CHILD | WS_VISIBLE | BS_AUTOCHECKBOX, 150, 1, 110, 22, hToolWnd, (HMENU)IDCB_LAYER_QUICKCLOSE, lcInst, NULL);
+
+    CheckDlgButton(hToolWnd, IDCB_LAYER_QUICKCLOSE, gbQuickClose ? BST_CHECKED : BST_UNCHECKED);
+
+    SendMessageW(hBtn, WM_SETFONT, (WPARAM)hUIFont, TRUE);
 
 #ifdef EDGE_BLANK_STYLE
-	hWorkWnd = CreateWindowEx( 0, WC_COMBOBOX, TEXT(""), WS_CHILD | WS_VISIBLE | CBS_DROPDOWNLIST, 290, 0, 123, 70, hToolWnd, (HMENU)IDCB_LAYER_EDGE_BLANK, lcInst, NULL );
-	ComboBox_AddString( hWorkWnd, TEXT("여백 추가 없음") );
-	ComboBox_AddString( hWorkWnd, TEXT("작은 여백 추가") );
-	ComboBox_AddString( hWorkWnd, TEXT("큰 여백 추가") );
-	ComboBox_SetCurSel( hWorkWnd, 0 );
+    hWorkWnd = CreateWindowExW( 0, WC_COMBOBOX, L"", WS_CHILD | WS_VISIBLE | CBS_DROPDOWNLIST, 260, 1, 120, 70, hToolWnd, (HMENU)IDCB_LAYER_EDGE_BLANK, lcInst, NULL);
+    ComboBox_AddString(hWorkWnd, L"여백 추가 없음");
+    ComboBox_AddString(hWorkWnd, L"작은 여백 추가");
+    ComboBox_AddString(hWorkWnd, L"큰 여백 추가");
+    ComboBox_SetCurSel(hWorkWnd, 0);
+    SendMessageW(hWorkWnd, WM_SETFONT, (WPARAM)hUIFont, TRUE);
 #endif
 
 

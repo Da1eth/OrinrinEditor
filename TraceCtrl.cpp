@@ -382,7 +382,7 @@ INT_PTR CALLBACK TraceCtrlDlgProc( HWND hDlg, UINT message, WPARAM wParam, LPARA
 					gstTrcPrm.dContrast = TRC_CONTRA_OFFSET;
 					gstTrcPrm.dGamma    = TRC_GAMMA_OFFSET;
 					gstTrcPrm.dGrayMoph = 0;
-					gstTrcPrm.dZooming  = TRC_ZOOM_OFFSET;
+					gstTrcPrm.dZooming  = 75; // TRC_ZOOM_OFFSET
 					gstTrcPrm.dTurning  = 0;
 
 					CheckDlgButton( hDlg, IDCB_TRC_IMG_UPSET, BST_UNCHECKED );
@@ -627,11 +627,12 @@ HRESULT TraceImageFileOpen( HWND hDlg )
 	if( ghImgDib  ){	gpifDeleteDIB( ghImgDib );	ghImgDib = NULL;	}
 	if( ghOrigDib ){	gpifDeleteDIB( ghOrigDib );	ghOrigDib = NULL;	}
 
-	//	ズームだけは元に戻す
-	gstTrcPrm.dZooming  = TRC_ZOOM_OFFSET;
+	//	줌 사이즈 원상복구
+	/*
+    gstTrcPrm.dZooming  = 75;
 	SendDlgItemMessage( hDlg, IDSL_TRC_ZOOM,     TBM_SETPOS, TRUE, gstTrcPrm.dZooming  );	//	
 	TraceOnScroll( hDlg, GetDlgItem( hDlg, IDSL_TRC_ZOOM ),     TB_THUMBPOSITION, gstTrcPrm.dZooming );
-
+    */
 	ghOrigDib = gpifToDIB( acName );
 
 	if( !(ghOrigDib) )	return E_HANDLE;

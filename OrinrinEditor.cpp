@@ -691,7 +691,7 @@ plugin::PLUGIN_FILE_LIST	gPluginList;
 
 //	하단바 크기 설정
 #define SB_ITEMS	8
-CONST INT	gadStsBarSize[] = { 50, 295, 475, 650, 825, 950, 1050, -1 };
+CONST INT	gadStsBarSize[] = { 50, 295, 475, 675, 825, 950, 1075, -1 };
 //-------------------------------------------------------------------------------------------------
 
 VOID	Cls_OnActivate( HWND, UINT, HWND, BOOL );		//!<	
