@@ -2192,7 +2192,7 @@ VOID Cls_OnDrawItem( HWND hWnd, CONST DRAWITEMSTRUCT *pstDrawItem )
 		rect = pstDrawItem->rcItem;
 
 		dBytes =  pstDrawItem->itemData;	//	文字列ポインタとか入ってる
-		StringCchPrintf( atBuff, SUB_STRING, TEXT("%d Bytes"), dBytes );
+		StringCchPrintf( atBuff, SUB_STRING, TEXT("%d 바이트"), dBytes );
 
 		if( gdPageByteMax < dBytes )	FillRect( pstDrawItem->hDC, &(pstDrawItem->rcItem), ghStsRedBrush );
 
