@@ -1487,7 +1487,7 @@ WA_CLICKACTIVE	2	マウスクリックによって、ウィンドウがアクテ
 		else							hWorkWnd = hWnd;
 		SetWindowPos( ghPgVwWnd, hWorkWnd, 0, 0, 0, 0, SWP_NOACTIVATE | SWP_NOMOVE | SWP_NOSIZE );
 
-		if( InitParamValue( INIT_LOAD, VL_MAA_TOPMOST, 1 ) )	//	ＭＡＡ窓
+		if( InitParamValue( INIT_LOAD, VL_MAA_TOPMOST, 0 ) )	//	ＭＡＡ窓
 		{
 			rdExStyle = GetWindowLongPtr( ghMaaWnd, GWL_EXSTYLE );	//	常手前の処理は不要
 			if( WS_EX_TOPMOST & rdExStyle )	hWorkWnd = HWND_TOPMOST;
@@ -2494,7 +2494,7 @@ INT InitParamValue( UINT dMode, UINT dStyle, INT nValue )
 		case  VL_GRID_X_POS:	StringCchCopy( atKeyName, SUB_STRING, TEXT("GridXpos") );		break;
 		case  VL_GRID_Y_POS:	StringCchCopy( atKeyName, SUB_STRING, TEXT("GridYpos") );		break;
 		case  VL_GRID_VIEW:		StringCchCopy( atKeyName, SUB_STRING, TEXT("GridView") );		break;
-	//  case  VL_MAA_TOPMOST:	StringCchCopy( atKeyName, SUB_STRING, TEXT("MaaViewOn") );		break;
+	    case  VL_MAA_TOPMOST:	StringCchCopy( atKeyName, SUB_STRING, TEXT("MaaViewOn") );		break;
 		case  VL_R_RULER_POS:	StringCchCopy( atKeyName, SUB_STRING, TEXT("RightRuler")  );	break;
 		case  VL_R_RULER_VIEW:	StringCchCopy( atKeyName, SUB_STRING, TEXT("RitRulerView") );	break;
 		case  VL_PAGETIP_VIEW:	StringCchCopy( atKeyName, SUB_STRING, TEXT("PageToolTip") );	break;

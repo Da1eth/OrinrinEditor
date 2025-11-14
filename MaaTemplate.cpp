@@ -168,22 +168,21 @@ HWND MaaTmpltInitialise( HINSTANCE hInstance, HWND hParentWnd, LPRECT pstFrame )
 		InitWindowPos( INIT_SAVE, WDP_MAATPL, &rect );//起動時保存
 	}
 
-	ghMaaWnd = CreateWindowEx(
-#ifdef _ORRVW
-		0, MAATMPLT_CLASS_NAME, TEXT("Orinrin Viewer"),
-		WS_OVERLAPPEDWINDOW,
-#else
-		WS_EX_TOOLWINDOW, MAATMPLT_CLASS_NAME, TEXT("Multi Line AA Template"),
-		WS_POPUP | WS_THICKFRAME | WS_BORDER | WS_CAPTION,
-#endif
-		rect.left, rect.top, rect.right, rect.bottom,
-		NULL, NULL, hInstance, NULL);
 
-	if( !(ghMaaWnd) )	return NULL;
+    // Multi Line AA Template 창 생성 부분 삭제
+#ifdef _ORRVW
+    ghMaaWnd = CreateWindowEx(
+        0, MAATMPLT_CLASS_NAME, TEXT("Orinrin Viewer"),
+        WS_OVERLAPPEDWINDOW,
+        rect.left, rect.top, rect.right, rect.bottom,
+        NULL, NULL, hInstance, NULL);
+#else
+    ghMaaWnd = NULL;
+#endif
 
 	//	常に最全面に表示を？
 #ifdef _ORRVW
-	bTopMost = InitParamValue( INIT_LOAD, VL_MAA_TOPMOST, 1 );
+	bTopMost = InitParamValue( INIT_LOAD, VL_MAA_TOPMOST, 0 );
 	if( bTopMost )
 	{
 		SetWindowPos( ghMaaWnd, HWND_TOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE );
@@ -193,7 +192,7 @@ HWND MaaTmpltInitialise( HINSTANCE hInstance, HWND hParentWnd, LPRECT pstFrame )
 	ShowWindow( ghMaaWnd, SW_SHOW );
 	UpdateWindow( ghMaaWnd );
 #else
-	if( InitParamValue( INIT_LOAD, VL_MAA_TOPMOST, 1 ) )	//	非表示ならONしない
+	if( InitParamValue( INIT_LOAD, VL_MAA_TOPMOST, 0 ) )	//	非表示ならONしない
 	{
 		if( InitWindowTopMost( INIT_LOAD, WDP_MAATPL , 0 ) )
 		{	SetWindowPos( ghMaaWnd, HWND_TOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE );	}
@@ -265,7 +264,7 @@ HRESULT MaaTmpltPositionReset( HWND hMainWnd )
 	ＭＡＡ窓のＶＩＥＷをtoggleする
 	@param[in]	bSet	非０Toggle処理　０状態確認
 	@return	非０見えてる　０消えてる
-
+    */
 BOOLEAN MaaViewToggle( UINT bSet )
 {
 	BOOL	bStyle;
@@ -283,18 +282,8 @@ BOOLEAN MaaViewToggle( UINT bSet )
 	}
 
 	return bStyle;
-}*/
-
-// MaaView 언제나 꺼짐 처리
-BOOLEAN MaaViewToggle(UINT bSet)
-{
-    if (!(ghMaaWnd))
-        return FALSE;
-
-    ShowWindow(ghMaaWnd, SW_HIDE);
-
-    return FALSE;
 }
+
 
 //-------------------------------------------------------------------------------------------------
 
@@ -387,7 +376,7 @@ SW_PARENTOPENING 3	The window's owner window is being restored.
 
 	if( fShow )	//	表示状態にされたとき
 	{
-		rslt = InitParamValue( INIT_LOAD, VL_MAA_TOPMOST, 1 );
+		rslt = InitParamValue( INIT_LOAD, VL_MAA_TOPMOST, 0 );
 		if( !(rslt) )	//	非表示指示であった場合は
 		{
 			ShowWindow( ghMaaWnd, SW_HIDE );	//	非表示にしておく
@@ -540,7 +529,7 @@ VOID Maa_OnCommand( HWND hWnd, INT id, HWND hwndCtl, UINT codeNotify )
 				SetWindowPos( hWnd, HWND_TOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE );
 #ifdef _ORRVW
 				CheckMenuItem( GetMenu(hWnd), IDM_TOPMOST_TOGGLE, MF_CHECKED );
-				InitParamValue( INIT_SAVE, VL_MAA_TOPMOST, 1 );
+				InitParamValue( INIT_SAVE, VL_MAA_TOPMOST, 0 );
 #else
 				InitWindowTopMost( INIT_SAVE, WDP_MAATPL, 1 );
 #endif

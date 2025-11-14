@@ -2647,14 +2647,12 @@ VOID OperationOnCommand( HWND hWnd, INT id, HWND hWndCtl, UINT codeNotify )
 		//	行頭半角空白をユニコードに変換
 		case IDM_HEADHALF_EXCHANGE:	DocHeadHalfSpaceExchange( hWnd );	break;
 
-            /* 미사용 기능(여러 줄 템플릿) 삭제
-		//	複数行テンプレを見せたり消したり
+		//	Multi Line AA Template 표시 값 0으로 고정
 		case  IDM_MAATMPLE_VIEW:
 			bMode = MaaViewToggle( TRUE );
-			InitParamValue( INIT_SAVE, VL_MAA_TOPMOST, bMode );
+			InitParamValue( INIT_SAVE, VL_MAA_TOPMOST, 0 );
 			MenuItemCheckOnOff( IDM_MAATMPLE_VIEW, bMode );
 			break;
-            */
 
 		//	空白の表示非表示切換
 		case IDM_SPACE_VIEW_TOGGLE:
