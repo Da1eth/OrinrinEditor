@@ -145,6 +145,7 @@ CONST static CONTEXTITEM	gstContextItem[] =
 		{  TEXT("브러시 팔레트 표시"),		    	    IDM_BRUSH_PALETTE		},
     	{  TEXT("유니코드 문자표 열기"),			    IDM_UNI_PALETTE			},
 		{  TEXT("트레이싱 모드"),					    IDM_TRACE_MODE_ON		},
+        {  TEXT("미리보기"),						    IDM_ON_PREVIEW          },
 		{  TEXT("선택한 페이지를 복제"),		        IDM_PAGEL_DUPLICATE		},
 		{  TEXT("선택한 페이지를 삭제"),	           	IDM_PAGEL_DELETE		},
     	{  TEXT("다음 페이지와 결합"),			    	IDM_PAGEL_COMBINE		},

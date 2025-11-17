@@ -152,17 +152,17 @@ static CONST TCHAR	gatLayoutTBtext[TB_LAYOUT_ITEMS][TBT_STRING] = {
 };
 
 //	表示
-#define TB_VIEW_ITEMS	2
+#define TB_VIEW_ITEMS	3
 static  TBBUTTON	gstViewTBInfo[] = {
 	{  0, IDM_UNI_PALETTE,			TBSTATE_ENABLED,	TBSTYLE_CHECK | TBSTYLE_AUTOSIZE,	{0, 0}, 0, 0  },	//	
-	{  1, IDM_TRACE_MODE_ON,		TBSTATE_ENABLED,	TBSTYLE_CHECK | TBSTYLE_AUTOSIZE,	{0, 0}, 0, 0  }/* 미사용 기능 삭제,	//	
-	{  2, IDM_ON_PREVIEW,			TBSTATE_ENABLED,	TBSTYLE_AUTOSIZE,					{0, 0}, 0, 0  },	//	
+	{  1, IDM_TRACE_MODE_ON,		TBSTATE_ENABLED,	TBSTYLE_CHECK | TBSTYLE_AUTOSIZE,	{0, 0}, 0, 0  },	//	
+	{  2, IDM_ON_PREVIEW,			TBSTATE_ENABLED,	TBSTYLE_AUTOSIZE,					{0, 0}, 0, 0  }/* 미사용 기능 삭제,	//	
 	{  3, IDM_DRAUGHT_OPEN,			TBSTATE_ENABLED,	TBSTYLE_AUTOSIZE,					{0, 0}, 0, 0  },	//	
 	{  4, IDM_MAA_THUMBNAIL_OPEN,	TBSTATE_ENABLED,	TBSTYLE_AUTOSIZE,					{0, 0}, 0, 0  } 	//	*/
 };
 
 static CONST TCHAR	gatViewTBtext[TB_VIEW_ITEMS][TBT_STRING] = { 
-	{ TEXT("유니코드 문자표") },	{ TEXT("트레이싱 모드") }/* 미사용 기능 삭제 ,	{TEXT("미리보기")},	{TEXT("드래프트 보드")},	{TEXT("여러 줄 섬네일")} */
+	{ TEXT("유니코드 문자표") },	{ TEXT("트레이싱 모드") } ,	{TEXT("미리보기")}/* 미사용 기능 삭제,	{TEXT("드래프트 보드")},	{TEXT("여러 줄 섬네일")} */
 };
 
 //全体

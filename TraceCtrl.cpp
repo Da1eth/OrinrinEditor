@@ -549,10 +549,10 @@ UINT_PTR CALLBACK ImageOpenDlgHookProc( HWND hDlg, UINT message, WPARAM wParam, 
 				TRACE( TEXT("%X,%X,%d"), hDlg, pstOfNty->hdr.hwndFrom, pstOfNty->hdr.idFrom );
 
 				CommDlg_OpenSave_GetSpec( pstOfNty->hdr.hwndFrom, atSpec, MAX_PATH );
-				TRACE( TEXT("[SPEC]%s"), atSpec );	//	ファイル名のみ
+				TRACE( TEXT("[SPEC]%s"), atSpec );	//	파일 이름
 
 				CommDlg_OpenSave_GetFilePath( pstOfNty->hdr.hwndFrom, atFile, MAX_PATH );
-				TRACE( TEXT("[FILE]%s"), atFile );	//	フルパス
+				TRACE( TEXT("[FILE]%s"), atFile );	//	파일 경로
 
 				ZeroMemory( acName, sizeof(acName) );
 				WideCharToMultiByte( CP_ACP, WC_NO_BEST_FIT_CHARS, atFile, MAX_PATH, acName, MAX_PATH, NULL, NULL );
@@ -600,7 +600,7 @@ HRESULT TraceImageFileOpen( HWND hDlg )
 	stOpenFile.lStructSize     = sizeof(OPENFILENAME);
 	stOpenFile.hInstance       = GetModuleHandle( NULL );
 	stOpenFile.hwndOwner       = GetDesktopWindow(  );
-	stOpenFile.lpstrFilter     = TEXT("이미지 파일 ( bmp, png, jpg, gif )\0*.bmp;*.png;*.jpg;*.jpeg;*.jpe;*.gif\0\0");
+	stOpenFile.lpstrFilter     = TEXT("이미지 파일 ( bmp, png, jpg, gif )\0*.bmp;*.png;*.jpg;*.jpeg;*.jpe;*.gif;*.webp\0\0");
 //	stOpenFile.nFilterIndex    = 1;
 	stOpenFile.lpstrFile       = atFilePath;
 	stOpenFile.nMaxFile        = MAX_PATH;
@@ -627,12 +627,6 @@ HRESULT TraceImageFileOpen( HWND hDlg )
 	if( ghImgDib  ){	gpifDeleteDIB( ghImgDib );	ghImgDib = NULL;	}
 	if( ghOrigDib ){	gpifDeleteDIB( ghOrigDib );	ghOrigDib = NULL;	}
 
-	//	줌 사이즈 원상복구
-	/*
-    gstTrcPrm.dZooming  = 75;
-	SendDlgItemMessage( hDlg, IDSL_TRC_ZOOM,     TBM_SETPOS, TRUE, gstTrcPrm.dZooming  );	//	
-	TraceOnScroll( hDlg, GetDlgItem( hDlg, IDSL_TRC_ZOOM ),     TB_THUMBPOSITION, gstTrcPrm.dZooming );
-    */
 	ghOrigDib = gpifToDIB( acName );
 
 	if( !(ghOrigDib) )	return E_HANDLE;

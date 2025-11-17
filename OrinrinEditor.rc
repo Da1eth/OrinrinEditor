@@ -1,4 +1,4 @@
-// Microsoft Visual C++ generated resource script.
+﻿// Microsoft Visual C++ generated resource script.
 //
 #pragma code_page(65001)
 
@@ -206,6 +206,7 @@ BEGIN
         MENUITEM "브러시 팔레트(&F)",                 IDM_BRUSH_PALETTE
         MENUITEM "유니코드 문자표(&U)",                IDM_UNI_PALETTE
         MENUITEM "트레이싱 모드(&R)",                 IDM_TRACE_MODE_ON
+        MENUITEM "미리보기(&P)",                   IDM_ON_PREVIEW
     END
 END
 
@@ -358,6 +359,7 @@ END
 IDC_ORINRINEDITOR ACCELERATORS
 BEGIN
     "A",            IDM_ALLSEL,             VIRTKEY, CONTROL, NOINVERT
+    "B",            IDM_ON_PREVIEW,         VIRTKEY, CONTROL, NOINVERT
     "C",            IDM_COPY,               VIRTKEY, CONTROL, NOINVERT
     "X",            IDM_CUT,                VIRTKEY, CONTROL, NOINVERT
     VK_LEFT,        IDM_DECR_DOT_LINES,     VIRTKEY, SHIFT, ALT, NOINVERT

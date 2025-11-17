@@ -379,9 +379,9 @@ LRESULT	ExceptionMessage( LPCSTR, LPCSTR, UINT, LPARAM );
 //-------------------------------------------------------------------------------------------------
 
 //	ImgCtl.dllに準拠
-#define ISAVE_BMP	0x1
-//#define ISAVE_JPEG	0x2
-#define ISAVE_PNG	0x3
+#define ISAVE_PNG	0x1
+#define ISAVE_BMP	0x2
+//#define ISAVE_JPEG	0x3
 //-------------------------------------------------------------------------------------------------
 
 #define CLIP_FORMAT	TEXT("ORINRIN_EDITOR_STYLE")	//!<	識別用・特に意味はない

@@ -348,7 +348,7 @@ HRESULT PreviewVisibalise( INT iNowPage, BOOLEAN bForeg )
 	}
 
 	//2024kai 200レス以上の全ページプレビューを開いた時スクロールするまで白い画面になる問題を改善
-	ghPrevWnd = CreateWindowEx( WS_EX_TOOLWINDOW | WS_EX_COMPOSITED, DOC_PREVIEW_CLASS, TEXT("IE Version Preview"),
+	ghPrevWnd = CreateWindowEx( WS_EX_TOOLWINDOW | WS_EX_COMPOSITED, DOC_PREVIEW_CLASS, TEXT("미리보기"),
 		WS_POPUP | WS_THICKFRAME | WS_CAPTION | WS_VISIBLE | WS_SYSMENU,
 		rect.left, rect.top, rect.right, rect.bottom, NULL, NULL, ghInst, NULL );
 
@@ -366,7 +366,7 @@ HRESULT PreviewVisibalise( INT iNowPage, BOOLEAN bForeg )
 
 	SendMessage( ghToolWnd, TB_BUTTONSTRUCTSIZE, (WPARAM)sizeof(TBBUTTON), 0 );
 	//	ツールチップ文字列を設定・ボタンテキストがツールチップになる
-	StringCchCopy( atBuffer, MAX_STRING, TEXT("전체 프리뷰 스타일") );	gstTBInfo[0].iString = SendMessage( ghToolWnd, TB_ADDSTRING, 0, (LPARAM)atBuffer );
+	StringCchCopy( atBuffer, MAX_STRING, TEXT("미리보기 스타일") );	gstTBInfo[0].iString = SendMessage( ghToolWnd, TB_ADDSTRING, 0, (LPARAM)atBuffer );
 
 	SendMessage( ghToolWnd , TB_ADDBUTTONS, (WPARAM)TB_ITEMS, (LPARAM)&gstTBInfo );	//	ツールバーにボタンを挿入
 
@@ -637,15 +637,13 @@ HRESULT PreviewPageWrite( INT iViewPage )
 		FREE(pcContent);
 	}
 
-	//	BSTRに必要なサイズ確認
+	//	인코딩 변환 수정
 	szSize = asString.size( );
-	bstrLen = MultiByteToWideChar( CP_UTF8, 0, asString.c_str( ), szSize, NULL, 0 );
+    bstrLen = MultiByteToWideChar(CP_ACP, 0, asString.c_str(), szSize, NULL, 0);
 
-	//	バッファを確保
-	bstr = SysAllocStringLen( NULL, bstrLen );
+    bstr = SysAllocStringLen(NULL, bstrLen);
 
-	//	BSTRにブチこむ
-	MultiByteToWideChar( CP_UTF8, 0, asString.c_str( ), szSize, bstr, bstrLen );
+    MultiByteToWideChar(CP_ACP, 0, asString.c_str(), szSize, bstr, bstrLen);
 
 	sfArray = SafeArrayCreateVector( VT_VARIANT, 0, 1 );
 			

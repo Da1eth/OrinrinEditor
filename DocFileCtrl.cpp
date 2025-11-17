@@ -721,7 +721,7 @@ HRESULT DocImageSave( HWND hWnd, UINT bStyle, HFONT hFont )
 	ZeroMemory( &stSaveFile, sizeof(OPENFILENAME) );
 	stSaveFile.lStructSize     = sizeof(OPENFILENAME);
 	stSaveFile.hwndOwner       = hWnd;
-	stSaveFile.lpstrFilter     = TEXT("BMP 파일 ( *.bmp )\0*.bmp\0PNG 파일 ( *.png )\0*.png\0\0");
+	stSaveFile.lpstrFilter     = TEXT("PNG 파일 ( *.png )\0*.png\0BMP 파일 ( *.bmp )\0*.bmp\0\0");
 	stSaveFile.nFilterIndex    = 1;	//	デフォのフィルタ選択肢
 	stSaveFile.lpstrFile       = atOutName;
 	stSaveFile.nMaxFile        = MAX_PATH;
@@ -737,11 +737,11 @@ HRESULT DocImageSave( HWND hWnd, UINT bStyle, HFONT hFont )
 
 	if( !(bOpened) ){	return  E_ABORT;	}
 
-	//選択したフィルタ番号が１インデックスで入る
+	//파일 저장할 때 PNG를 기본값으로
 	switch( stSaveFile.nFilterIndex )
 	{
-		default:	bType = ISAVE_BMP;	break;
-		case  2:	bType = ISAVE_PNG;	break;
+		default:	bType = ISAVE_PNG;	break;
+		case  2:	bType = ISAVE_BMP;	break;
 	}
 
 	dLines = DocNowFilePageLineCount(  );//DocPageParamGet( NULL , NULL );	//	要るのは行数
